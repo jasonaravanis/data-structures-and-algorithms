@@ -4,6 +4,12 @@ import java.util.Arrays;
 
 public class MergeSort {
 
+    /*
+    * MergeSort is O(n * log(n))
+    * - splitting the array into subarrays of length 1 takes log(n) steps
+    * - takes O(n) time to merge the subarrays of length 1 back into an ordered array
+    *  */
+
     private static void merge(int[] array, int[] left, int[] right) {
         // i: left iterator
         // j: right iterator
