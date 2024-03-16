@@ -5,9 +5,12 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        int[] test = {2,4,6 };
-        int[] sorted = InsertionSort.sort(test);
+        int[] test = {1,4,3,2 };
+        int[] testTwo = {1,4,3,2 };
+        int[] sorted = InsertionSortNew.sort(test);
+        int[] sortedTwo = InsertionSort.sort(testTwo);
         System.out.println("Final result: " + Arrays.toString(sorted));
+        System.out.println("Final result: " + Arrays.toString(sortedTwo));
     }
 }
 
