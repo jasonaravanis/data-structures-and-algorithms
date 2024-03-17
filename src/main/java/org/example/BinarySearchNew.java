@@ -2,51 +2,25 @@ package org.example;
 
 public class BinarySearchNew {
 
-    public static boolean binarySearch(int[] array, int needle) {
 
-        int lo = 0;
-        int hi = array.length - 1;
-
-        while (lo <= hi) {
-            int pivot  = Math.floorDiv(lo + hi, 2);
-            if (array[pivot] == needle) {
-                return true;
-            }
-            if (array[pivot] > needle) {
-                hi = pivot - 1;
-                continue;
-            }
-            if (array[pivot] < needle) {
-                lo = pivot + 1;
-                continue;
-            }
-        }
-
-
-        return false;
-    }
-
-
-
-    private static boolean binarySearchRecursiveWalk(int[] array, int hi, int lo, int needle) {
-        int pivot = Math.floorDiv(lo + hi, 2);
-        if (array[pivot] == needle) {
-            return true;
-        }
-        if (hi == lo) {
+    private static boolean recursiveSearch(int[] array, int low, int high, int needle) {
+        if (high < low) {
             return false;
         }
-        if (array[pivot] > needle) {
-            return binarySearchRecursiveWalk(array, pivot - 1, lo, needle);
+        int pivot = Math.floorDiv(low + high, 2);
+        if (needle == array[pivot]) {
+            return true;
         }
-        if (array[pivot] < needle) {
-            return binarySearchRecursiveWalk(array, hi, pivot + 1, needle);
+        if (needle < array[pivot]) {
+            return recursiveSearch(array, low, pivot - 1, needle);
         }
-
+        if (needle > array[pivot]) {
+            return recursiveSearch(array, pivot + 1, high, needle);
+        }
         return false;
     }
 
-    public static boolean binarySearchRecursive(int[] array, int needle) {
-        return binarySearchRecursiveWalk(array, array.length - 1, 0, needle);
+    public static boolean search(int[] array, int needle) {
+        return recursiveSearch(array, 0, array.length - 1, needle);
     }
 }
