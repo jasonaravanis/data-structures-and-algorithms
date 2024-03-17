@@ -2,7 +2,7 @@ package org.example;
 
 public class InsertionSortNew {
 
-    public static int[] sort(int[] array) {
+    public static void sort(int[] array) {
         // we loop over each element, starting with the second element as the pivot
         // we assume the list on the left side of the pivot is sorted (if it just has one element in it at
         // position 0, it is sorted)
@@ -11,20 +11,13 @@ public class InsertionSortNew {
         // we repeat as long as there are elements to process (i > 0) and the value of the most recent element is still
         // greater than the pivot value
 
-        int whileLoopCount = 0;
-
         for (int i = 1; i < array.length; i++) {
-            int pivot = array[i];
-            int j = i - 1;
-            while (j > 0 && array[j] > pivot) {
-                array[j + 1] = array[j];
-                j--;
-                whileLoopCount++;
+            int pivotValue = array[i];
+            while (i > 0 && array[i - 1] > pivotValue) {
+                array[i] = array[i - 1];
+                i--;
             }
-            array[j + 1] = pivot;
+            array[i] = pivotValue;
         }
-
-        System.out.println("While loop count: " + whileLoopCount);
-        return array;
     }
 }
