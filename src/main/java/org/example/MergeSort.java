@@ -8,6 +8,7 @@ public class MergeSort {
     * MergeSort is O(n * log(n))
     * - splitting the array into subarrays of length 1 takes log(n) steps
     * - takes O(n) time to merge the subarrays of length 1 back into an ordered array
+    * - primaeagen says the constant in front of n* log(n) is rather large due to the amount of array copying
     *  */
 
     private static void merge(int[] array, int[] left, int[] right) {

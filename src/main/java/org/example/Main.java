@@ -6,15 +6,9 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        Random rand = new Random();
-        int[] numbers = new int[10];
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = rand.nextInt(1000000);
-        }
-        System.out.println(Arrays.toString(numbers));
-//        int[] test = {37, 56, 10, 68, 21, 3, 81, 56, 64, 11};
-        MergeSort.sort(numbers);
-        System.out.println(Arrays.toString(numbers));
+        int[] arr = {9,3,7,4,69,420,42};
+        QuickSort.sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }
 
@@ -41,3 +35,15 @@ public class Main {
 //    int[] sortedTwo = InsertionSort.sort(testTwo);
 //        System.out.println("Final result: " + Arrays.toString(sorted));
 //                System.out.println("Final result: " + Arrays.toString(sortedTwo));
+
+//    int[] test = {1,2,3,4,5};
+//        System.out.println(BinarySearchNew.search(test, 6));
+
+//    Random rand = new Random();
+//    int[] numbers = new int[10];
+//        for (int i = 0; i < numbers.length; i++) {
+//        numbers[i] = rand.nextInt(100);
+//        }
+//        System.out.println(Arrays.toString(numbers));
+//        InsertionSortNew.sort(numbers);
+//        System.out.println(Arrays.toString(numbers));
