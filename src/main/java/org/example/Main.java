@@ -6,19 +6,18 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        Random rand = new Random();
-        int[] numbers = new int[10];
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = rand.nextInt(1000000);
-        }
-        System.out.println(Arrays.toString(numbers));
-//        int[] test = {37, 56, 10, 68, 21, 3, 81, 56, 64, 11};
-        MergeSort.sort(numbers);
-        System.out.println(Arrays.toString(numbers));
+
+        int[] test = { 8, 0, 3, 0, 12};
+        ZeroSorter.sort(test);
+        System.out.println(Arrays.toString(test));
     }
 }
 
-
+//        Random rand = new Random();
+//        int[] numbers = new int[10];
+//        for (int i = 0; i < numbers.length; i++) {
+//            numbers[i] = rand.nextInt(1000000);
+//        }
 
 //        int needle = 11;
 //        int[] haystack = {1,2,3,4,5,6,7,8,9,10,11};
