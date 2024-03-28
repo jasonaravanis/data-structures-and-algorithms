@@ -7,7 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Tuple.runExample();
+        String[] test = {"Taylor Swift", "Beyonce", "Dua Lipa", "Katy Perry", "Taylor Swift"};
+
+        String[] result = DuplicateFinder.getDuplicates(test);
+
+        System.out.println(Arrays.toString(result));
     }
 }
 
