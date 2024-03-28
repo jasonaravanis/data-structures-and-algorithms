@@ -7,9 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] test = { 8, 0, 3, 0, 12};
-        ZeroSorter.sort(test);
-        System.out.println(Arrays.toString(test));
+        Tuple.runExample();
     }
 }
 
