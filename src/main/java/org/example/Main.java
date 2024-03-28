@@ -7,9 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String[] test = {"Taylor Swift", "Beyonce", "Dua Lipa", "Katy Perry", "Taylor Swift"};
+        String[] alpha = {"Taylor Swift", "Beyonce", "Dua Lipa", "Katy Perry"};
+        String[] beta = {"Justin Bieber", "Kaleo", "Dua Lipa", "Gotye"};
 
-        String[] result = DuplicateFinder.getDuplicates(test);
+        String[] result = IntersectionFinder.getIntersection(alpha, beta);
 
         System.out.println(Arrays.toString(result));
     }
