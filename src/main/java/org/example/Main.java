@@ -6,16 +6,14 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        int[] arr = {9,3,7,4,69,420,42};
-        QuickSort.sort(arr);
-        System.out.println(Arrays.toString(arr));
 
-        String[] alpha = {"Taylor Swift", "Beyonce", "Dua Lipa", "Katy Perry"};
-        String[] beta = {"Justin Bieber", "Kaleo", "Dua Lipa", "Gotye"};
+        LinkedList<Integer> linkedList = new LinkedList<>();
 
-        String[] result = IntersectionFinder.getIntersection(alpha, beta);
+        linkedList.add(5);
+        linkedList.add(32);
+        linkedList.add(24);
 
-        System.out.println(Arrays.toString(result));
+        System.out.println(linkedList);
     }
 }
 
