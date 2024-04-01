@@ -26,6 +26,17 @@ public class LinkedList<T> {
         }
     }
 
+    public boolean find(T data) {
+        Node<T> current = head;
+        while (current != null) {
+            if (current.data == data) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
         Node<T> current = head;

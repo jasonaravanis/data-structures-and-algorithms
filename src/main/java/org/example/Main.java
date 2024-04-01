@@ -4,21 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        LinkedList<Integer> linkedList = new LinkedList<>();
 
-        linkedList.add(5);
-        linkedList.add(32);
-        linkedList.add(24);
+        LinkedList<Integer> list = new LinkedList<>();
 
-        System.out.println(linkedList);
+        list.add(5);
+        list.add(32);
+        list.add(24);
 
-        java.util.LinkedList<Integer> javaLinkedList = new java.util.LinkedList<>();
+        System.out.println(list);
 
-        javaLinkedList.add(5);
-        javaLinkedList.add(32);
-        javaLinkedList.add(24);
-
-        System.out.println(javaLinkedList);
+        System.out.println(list.find(32));
+        System.out.println(list.find(18));
     }
 }
 
