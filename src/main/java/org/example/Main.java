@@ -13,8 +13,8 @@ public class Main {
 
         System.out.println(list);
 
-        System.out.println(list.find(32));
-        System.out.println(list.find(18));
+        list.remove(5);
+        System.out.println(list);
     }
 }
 

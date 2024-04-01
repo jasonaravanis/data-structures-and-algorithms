@@ -27,7 +27,7 @@ public class LinkedList<T> {
     }
 
     public boolean find(T data) {
-        Node<T> current = head;
+        Node<T> current = this.head;
         while (current != null) {
             if (current.data == data) {
                 return true;
@@ -35,6 +35,25 @@ public class LinkedList<T> {
             current = current.next;
         }
         return false;
+    }
+
+    public T remove(T data) {
+        Node<T> current = this.head;
+        if (current.data == data) {
+            Node<T> target = head;
+            this.head = this.head.next;
+            return target.data;
+
+        }
+        while (current.next != null) {
+            if (current.next.data == data) {
+                Node<T> removalTarget = current.next;
+                current.next = removalTarget.next;
+                return removalTarget.data;
+            }
+            current = current.next;
+        }
+        return null;
     }
 
     public String toString() {
