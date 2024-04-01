@@ -9,10 +9,21 @@ public class Main {
         int[] arr = {9,3,7,4,69,420,42};
         QuickSort.sort(arr);
         System.out.println(Arrays.toString(arr));
+
+        String[] alpha = {"Taylor Swift", "Beyonce", "Dua Lipa", "Katy Perry"};
+        String[] beta = {"Justin Bieber", "Kaleo", "Dua Lipa", "Gotye"};
+
+        String[] result = IntersectionFinder.getIntersection(alpha, beta);
+
+        System.out.println(Arrays.toString(result));
     }
 }
 
-
+//        Random rand = new Random();
+//        int[] numbers = new int[10];
+//        for (int i = 0; i < numbers.length; i++) {
+//            numbers[i] = rand.nextInt(1000000);
+//        }
 
 //        int needle = 11;
 //        int[] haystack = {1,2,3,4,5,6,7,8,9,10,11};
