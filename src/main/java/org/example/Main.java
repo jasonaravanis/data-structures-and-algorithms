@@ -11,6 +11,14 @@ public class Main {
         linkedList.add(24);
 
         System.out.println(linkedList);
+
+        java.util.LinkedList<Integer> javaLinkedList = new java.util.LinkedList<>();
+
+        javaLinkedList.add(5);
+        javaLinkedList.add(32);
+        javaLinkedList.add(24);
+
+        System.out.println(javaLinkedList);
     }
 }
 
