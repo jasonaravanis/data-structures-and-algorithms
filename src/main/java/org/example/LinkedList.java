@@ -3,6 +3,7 @@ package org.example;
 public class LinkedList<T> {
 
     private Node<T> head;
+    private Node<T> tail;
 
     private static class Node<T> {
         private T data;
@@ -17,12 +18,16 @@ public class LinkedList<T> {
         Node<T> newNode = new Node<>(data);
         if (head == null) {
             head = newNode;
+            tail = newNode;
+            tail.next = tail;
         } else {
             Node<T> current = head;
-            while (current.next != null) {
+            while (current.next != head) {
                 current = current.next;
             }
             current.next = newNode;
+            tail = newNode;
+            tail.next = head;
         }
     }
 
@@ -59,13 +64,18 @@ public class LinkedList<T> {
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
         Node<T> current = head;
-        while (current != null) {
+        boolean isCycle = this.isCycle();
+        if (current == null) {
+            return "empty";
+        }
+        do {
             stringBuilder.append(current.data);
-            if (current.next != null) {
+            if (current.next != this.head) {
                 stringBuilder.append(" --> ");
             }
             current = current.next;
         }
+        while (current != head);
         return stringBuilder.toString();
     }
 
@@ -80,5 +90,24 @@ public class LinkedList<T> {
             current = next;
         }
         this.head = previous;
+    }
+
+    public boolean isCycle() {
+        Node<T> slow = head;
+        Node<T> fast = head;
+
+        while (true) {
+            try {
+                slow = slow.next;
+                fast = fast.next.next;
+                if (slow == fast) {
+                    return true;
+                }
+            } catch (NullPointerException e) {
+                return false;
+            }
+
+
+        }
     }
 }

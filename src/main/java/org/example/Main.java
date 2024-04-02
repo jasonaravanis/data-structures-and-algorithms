@@ -10,11 +10,15 @@ public class Main {
         list.add(5);
         list.add(32);
         list.add(24);
+//        list.add(4);
+//        list.add(16);
+//        list.add(55);
+//        list.add(5);
+
 
         System.out.println(list);
 
-        list.reverse();
-        System.out.println(list);
+        System.out.println(list.isCycle());
     }
 }
 
