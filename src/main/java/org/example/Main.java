@@ -1,24 +1,32 @@
 package org.example;
 
+import java.util.stream.IntStream;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        // start with a string
+        // for each char in string,
+        // push to the stack
+        // then, for each node in the stack
+        // pop it off and print it
 
-        CircularLinkedList<Integer> list = new CircularLinkedList<>();
+        Stack<Character> stack = new Stack<>();
 
-        list.add(5);
-        list.add(32);
-        list.add(24);
-//        list.add(4);
-//        list.add(16);
-//        list.add(55);
-//        list.add(5);
+        String testString = "Hello World";
+
+        IntStream charStream = testString.chars();
+
+        charStream.forEach(c -> stack.push((char) c));
+
+        while (!stack.isEmpty()) {
+            char c = stack.pop();
+            System.out.println(c);
+        }
 
 
-        System.out.println(list);
 
-        System.out.println(list.isCycle());
     }
 }
 
