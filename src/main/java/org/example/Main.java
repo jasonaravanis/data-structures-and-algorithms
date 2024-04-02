@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        LinkedList<Integer> list = new LinkedList<>();
+        CircularLinkedList<Integer> list = new CircularLinkedList<>();
 
         list.add(5);
         list.add(32);

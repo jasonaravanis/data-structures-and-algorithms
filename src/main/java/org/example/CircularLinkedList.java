@@ -1,6 +1,6 @@
 package org.example;
 
-public class LinkedList<T> {
+public class CircularLinkedList<T> {
 
     private Node<T> head;
     private Node<T> tail;
