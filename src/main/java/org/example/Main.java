@@ -13,7 +13,7 @@ public class Main {
 
         System.out.println(list);
 
-        list.remove(5);
+        list.reverse();
         System.out.println(list);
     }
 }

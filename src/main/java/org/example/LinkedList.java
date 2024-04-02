@@ -68,4 +68,17 @@ public class LinkedList<T> {
         }
         return stringBuilder.toString();
     }
+
+    public void reverse() {
+        Node<T> current = head;
+        Node<T> previous = null;
+
+        while (current != null) {
+            Node<T> next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        this.head = previous;
+    }
 }
