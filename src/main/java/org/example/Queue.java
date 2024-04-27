@@ -3,7 +3,7 @@ package org.example;
 import java.util.Optional;
 
 public class Queue<T> {
-    // A basic queue. In real life just use a LinkedList which implements the Deque abstract interface
+    // A basic queue. In real life just use an ArrayDeque which implements the Deque abstract interface
 
     private static class Node<T> {
         private T value;
